@@ -8,7 +8,7 @@
 
 **作者：李笑来**
 
-特别感谢**霍炬**（[@virushuo](https://github.com/virushuo)）、**洪强宁**（[@hongqn](https://github.com/hongqn)) 两位良师诤友在此书写作过程中给予我的巨大帮助！
+特别感谢 **霍炬**（[@virushuo](https://github.com/virushuo)）、**洪强宁**（[@hongqn](https://github.com/hongqn)) 两位良师诤友在此书写作过程中给予我的巨大帮助！
 
 ![](images/learning-curve-spiral.png)
 
@@ -31,9 +31,9 @@ teach_yourself(coding)
 ### 目录
 
 > - [01.preface（**前言**）](01.preface.ipynb)
-> - [02.proof-of-work（**如何证明你真的读过这本书？**）](02.proof-of-work.ipynb)
-> - [Part.1.A.better.teachyourself（**为什么一定要掌握自学能力？**）](Part.1.A.better.teachyourself.ipynb)
-> - [Part.1.B.why.start.from.learning.coding（**为什么把编程当作自学的入口？**）](Part.1.B.why.start.from.learning.coding.ipynb)
+> - [02.proof-of-work（**如何证明你真的读过这本书**）](02.proof-of-work.ipynb)
+> - [Part.1.A.better.teachyourself（**为什么一定要掌握自学能力**）](Part.1.A.better.teachyourself.ipynb)
+> - [Part.1.B.why.start.from.learning.coding（**为什么把编程当作自学的入口**）](Part.1.B.why.start.from.learning.coding.ipynb)
 > - [Part.1.C.must.learn.sth.only.by.reading（**只靠阅读习得新技能**）](Part.1.C.must.learn.sth.only.by.reading.ipynb)
 > - [Part.1.D.preparation.for.reading（**开始阅读前的一些准备**）](Part.1.D.preparation.for.reading.ipynb)
 > - [Part.1.E.1.entrance（**入口**）](Part.1.E.1.entrance.ipynb)
@@ -43,11 +43,11 @@ teach_yourself(coding)
 > - [Part.1.E.5.strings（**字符串**）](Part.1.E.5.strings.ipynb)
 > - [Part.1.E.6.containers（**数据容器**）](Part.1.E.6.containers.ipynb)
 > - [Part.1.E.7.files（**文件**）](Part.1.E.7.files.ipynb)
-> - [Part.1.F.deal-with-forward-references（**如何从容应对含有过多“过早引用”的知识？**）](Part.1.F.deal-with-forward-references.ipynb)
+> - [Part.1.F.deal-with-forward-references（**如何从容应对含有过多“过早引用”的知识**）](Part.1.F.deal-with-forward-references.ipynb)
 > - [Part.1.G.The-Python-Tutorial-local（**官方教程：The Python Tutorial**）](Part.1.G.The-Python-Tutorial-local.ipynb)
 > - [Part.2.A.clumsy-and-patience（**笨拙与耐心**）](Part.2.A.clumsy-and-patience.ipynb)
 > - [Part.2.B.deliberate-practicing（**刻意练习**）](Part.2.B.deliberate-practicing.ipynb)
-> - [Part.2.C.why-start-from-writing-functions（**为什么从函数开始？**）](Part.2.C.why-start-from-writing-functions.ipynb)
+> - [Part.2.C.why-start-from-writing-functions（**为什么从函数开始**）](Part.2.C.why-start-from-writing-functions.ipynb)
 > - [Part.2.D.1-args（**关于参数（上）**）](Part.2.D.1-args.ipynb)
 > - [Part.2.D.2-aargs（**关于参数（下）**）](Part.2.D.2-aargs.ipynb)
 > - [Part.2.D.3-lambda（**化名与匿名**）](Part.2.D.3-lambda.ipynb)
@@ -71,11 +71,11 @@ teach_yourself(coding)
 > - [Part.3.H.prevent-focus-drifting（**避免注意力漂移**）](Part.3.H.prevent-focus-drifting.ipynb)
 > - [Q.good-communiation（**如何成为优秀沟通者**）](Q.good-communiation.ipynb)
 > - [R.finale（**自学者的终点**）](R.finale.ipynb)
-> - [S.whats-next（**下一步干什么？**）](S.whats-next.ipynb)
+> - [S.whats-next（**下一步干什么**）](S.whats-next.ipynb)
 > - [T-appendix.editor.vscode（**Visual Studio Code 的安装与配置**）](T-appendix.editor.vscode.ipynb)
 > - [T-appendix.git-introduction（**Git 简介**）](T-appendix.git-introduction.ipynb)
 > - [T-appendix.jupyter-installation-and-setup（**Jupyterlab 的安装与配置**）](T-appendix.jupyter-installation-and-setup.ipynb)
-> - [T-appendix.symbols（**这些符号都代表什么？**）](T-appendix.symbols.ipynb)
+> - [T-appendix.symbols（**这些符号都代表什么**）](T-appendix.symbols.ipynb)
 
 
 本书的版权协议为 [CC-BY-NC-ND license](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)。
