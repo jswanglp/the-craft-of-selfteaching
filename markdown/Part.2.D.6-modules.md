@@ -95,7 +95,7 @@ import sys
 sys.path
 ```
 
-在 `sys.path` 所返回的目录列表中，你当前的工作目录排在第一位。
+在 `sys.path` 所返回的目录列表中，你==当前的工作目录排在第一位==。
 
 有时，你需要指定检索目录，因为你知道你要用的模块文件在什么位置，那么可以用 `sys.path.append()` 添加一个搜索位置：
 
@@ -178,7 +178,7 @@ is_prime(3)
 
     True
 
-注意，如果当前目录中并没有 `mycode.py` 这个文件，那么，`mycode` 会被当作目录名再被尝试一次 —— 如果当前目录内，有个叫做 `mycode` 的目录（或称文件夹）且该目录下同时要存在一个 [`__init__.py`](https://docs.python.org/3/reference/import.html#regular-packages) 文件（通常为空文件，用于标识本目录形成一个包含多个模块的 **包**（[packages](https://docs.python.org/3/reference/import.html#regular-packages)），它们处在一个独立的 **命名空间**（[namespace](https://docs.python.org/3/glossary.html#term-namespace-package)）），那么，`from mycode import *` 的作用就是把 `mycode` 这个文件夹中的所有 `.py` 文件全部导入……
+注意，如果当前目录中并没有 `mycode.py` 这个文件，那么，`mycode` 会被当作目录名再被尝试一次 —— ==如果当前目录内，有个叫做 `mycode` 的目录（或称文件夹）且该目录下同时要存在一个 [`__init__.py`](https://docs.python.org/3/reference/import.html#regular-packages) 文件（通常为空文件，用于标识本目录形成一个包含多个模块的 **包**（[packages](https://docs.python.org/3/reference/import.html#regular-packages)）==，它们处在一个独立的 **命名空间**（[namespace](https://docs.python.org/3/glossary.html#term-namespace-package)）），那么，`from mycode import *` 的作用就是把 `mycode` 这个文件夹中的所有 `.py` 文件全部导入……
 
 如果我们想要导入 `foo` 这个目录中的 `bar.py` 这个模块文件，那么，可以这么写：
 
@@ -219,7 +219,7 @@ m.say_hi('mike', 'zoe')
 
 ## 模块中不一定只有函数
 
-一个模块文件中，不一定只包含函数；它也可以包含函数之外的可执行代码。只不过，在 `import` 语句执行的时候，模块中的非函数部分的可执行代码，只执行一次。
+一个模块文件中，不一定只包含函数；它也可以包含函数之外的可执行代码。只不过，==在 `import` 语句执行的时候，模块中的非函数部分的可执行代码，只执行一次。==
 
 有一个 Python 的彩蛋，恰好是可以用在此处的最佳例子 —— 这个模块是 `this`，它的文件名是 [`this.py`](https://github.com/python/cpython/blob/master/Lib/this.py)：
 

@@ -46,8 +46,8 @@ if __name__ == '__main__':
 
 这么做的结果是：
 
-> 1. 当 Python 文件被当作模块，被 `import` 语句导入时，`if` 判断失败，`main()` 函数不被执行；
-> 2. 当 Python 文件被 `python -m` 运行的时候，`if` 判断成功，`main()` 函数才被执行。
+> 1. ==当 Python 文件被当作模块，被 `import` 语句导入时，`if` 判断失败，`main()` 函数不被执行；==
+> 2. ==当 Python 文件被 `python -m` 运行的时候，`if` 判断成功，`main()` 函数才被执行。==
 
 还记得那个 Python 的彩蛋吧？`this.py` 的代码如下：
 
