@@ -29,7 +29,7 @@ say_hi('mike', 'john', 'zeo')
 
 `say_hi()` 这一行没有任何输出。因为你在调用函数的时候，没有给它传递任何值，于是，在函数内部代码执行的时候，`name in names` 的值是 `False`，所以，`for` 循环内部的代码没有被执行。
 
-在函数内部，是把 `names` 这个参数当作容器处理的 —— 否则也没办法用 `for ... in ...` 来处理。而在调用函数的时候，我们是可以将一个容器传递给函数的 Arbitrary Positional Arguments 的 —— 做法是，在调用函数的时候，在参数前面加上星号 `*`：
+在函数内部，是把 `names` 这个参数当作容器处理的 —— 否则也没办法用 `for ... in ...` 来处理。==而在调用函数的时候，我们是可以将一个容器传递给函数的 Arbitrary Positional Arguments 的 —— 做法是，在调用函数的时候，在参数前面加上星号 `*`：==
 
 ```python
 def say_hi(*names):
@@ -96,7 +96,7 @@ say_hi(*a_dictionary)
 
 _在定义可以接收一系列值的位置参数时，建议在函数内部为该变量命名时总是用**复数**_，因为函数内部，总是需要 `for` 循环去迭代元组中的元素，这样的时候，名称的复数形式对代码的可读性很有帮助 —— 注意以上程序第二行。以中文为母语的人，在这个细节上常常感觉 “不堪重负” —— 因为中文的名词没有复数 —— 但必须习惯。（同样的道理，若是用拼音命名变量，就肯定是为将来挖坑……）
 
-**注意**：一个函数中，可以接收一系列值的位置参数只能有一个；并且若是还有其它位置参数存在，那就必须把这个可以接收一系列值的位置参数排在所有其它位置参数之后。
+**注意**：==一个函数中，可以接收一系列值的位置参数只能有一个；并且若是还有其它位置参数存在，那就必须把这个可以接收一系列值的位置参数排在所有其它位置参数之后。==
 
 ```python
 def say_hi(greeting, *names):
@@ -136,7 +136,7 @@ say_hi('Hello', 'mike', 'john', 'zeo', capitalized=True)
 
 之前我们看到，可以设定一个位置参数（Positional Argument），接收一系列的值，被称作 “Arbitrary Positional Argument”；
 
-同样地，我们也可以设定一个可以接收很多值的关键字参数（Arbitrary Keyword Argument）。
+同样地，我们也可以设定一个可以==接收很多值的关键字参数==（Arbitrary Keyword Argument）。
 
 ```python
 def say_hi(**names_greetings):
@@ -221,7 +221,7 @@ say_hi('Welcome', 'mike', 'john', 'zeo', capitalized=True)
     Hi, mike!
     Hi, john!
     Hi, zeo!
-
+    
     Welcome, Mike!
     Welcome, John!
     Welcome, Zeo!
@@ -261,7 +261,7 @@ say_hi('mike', 'john', 'zeo', greeting='Hi')
     Hi, john!
     Hi, zeo!
 
-这是因为函数被调用时，面对许多参数，Python 需要按照既定的规则（即，顺序）判定每个参数究竟是哪一类型的参数：
+==这是因为函数被调用时，面对许多参数，Python 需要按照既定的规则（即，顺序）判定每个参数究竟是哪一类型的参数：==
 
 > **Order of Arguments**
 > 1. Positional

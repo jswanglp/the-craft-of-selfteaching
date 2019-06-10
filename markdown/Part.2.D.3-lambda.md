@@ -26,18 +26,18 @@ type(_is_leap)              # 它们都是 function
 ```
 
     <function __main__._is_leap(year)>
-
+    
     True
-
+    
     4547071648
-
+    
     4547071648
-
+    
+    function
+    
     function
 
-    function
-
-我们可以看到的是，`id(year_leap_bool)` 和 `id(_is_leap)` 的内存地址是一样的 —— 它们是同一个对象，它们都是函数。所以，当你写 `year_leap_bool = _is_leap` 的时候，相当于给 `_is_leap()` 这个函数取了个化名。
+我们可以看到的是，`id(year_leap_bool)` 和 `id(_is_leap)` 的==内存地址是一样的== —— 它们是同一个对象，它们都是函数。所以，当你写 `year_leap_bool = _is_leap` 的时候，相当于给 `_is_leap()` 这个函数取了个化名。
 
 在什么样的情况下，要给一个函数取一个化名呢？
 
@@ -84,7 +84,7 @@ lambda x, y: x + y
 
 先写上 `lambda` 这个关键字，其后分为两个部分，`:` 之前是参数，之后是表达式；这个表达式的值，就是这个函数的返回值。
 
-> **注意**：`lambda` 语句中，`:` 之后有且只能有一个表达式。
+> **注意**：`lambda` 语句中，`:` 之后==有且只能有一个表达式==。
 
 而这个函数呢，没有名字，所以被称为 “匿名函数”。
 
@@ -113,7 +113,7 @@ f(1)
 ```
 
     42
-
+    
     43
 
 这个例子乍看起来很令人迷惑。我们先看看 `f = make_incrementor(42)` 之后，`f` 究竟是什么东西：
@@ -130,12 +130,12 @@ id(f)
 ```
 
     <function __main__.make_incrementor.<locals>.<lambda>(x)>
-
+    
     4428443296
-
+    
     4428726888
 
-首先，要注意，`f` 并不是 `make_incrementor()` 这个函数的化名，如果是给这个函数取个化名，写法应该是：
+首先，要注意，`f` ==并不是 `make_incrementor()` 这个函数的化名==，如果是给这个函数取个化名，写法应该是：
 
 ```python
 f = make_incrementor
@@ -172,7 +172,7 @@ c_list
 ```
 
     [2, 4, 6, 8, 10, 12]
-
+    
     [2, 4, 6, 8, 10, 12]
 
 显然用 `lambda` 更为简洁。另外，类似完成 `double_it(n)` 这种简单功能的函数，常常有 “用过即弃” 的必要。
@@ -206,9 +206,9 @@ list(map(lambda x: x['phone'], phonebook))
      {'name': 'mike', 'phone': 5603},
      {'name': 'stan', 'phone': 6898},
      {'name': 'eric', 'phone': 7898}]
-
+    
     ['john', 'mike', 'stan', 'eric']
-
+    
     [9876, 5603, 6898, 7898]
 
 可以给 map() 传递若干个可被迭代对象：

@@ -86,6 +86,7 @@ print('Get out of f(n), and f(5) =', f(5))
 
 > 山上有座庙，庙里有个和尚，和尚讲故事，说……
 > > 山上有座庙，庙里有个和尚，和尚讲故事，说……
+> >
 > > > 山上有座庙，庙里有个和尚，和尚讲故事，说……
 
 写成 Python 程序大概是这样：
@@ -186,26 +187,26 @@ x(5)
 ```
 
     ---------------------------------------------------------------------------
-
+    
     RecursionError                            Traceback (most recent call last)
-
+    
     <ipython-input-3-daa4d33fb39b> in <module>
           1 def x(n):
           2     return n * x(n-1)
     ----> 3 x(5)
-
+    
     <ipython-input-3-daa4d33fb39b> in x(n)
           1 def x(n):
     ----> 2     return n * x(n-1)
           3 x(5)
-
+    
     ... last 1 frames repeated, from the frame below ...
-
+    
     <ipython-input-3-daa4d33fb39b> in x(n)
           1 def x(n):
     ----> 2     return n * x(n-1)
           3 x(5)
-
+    
     RecursionError: maximum recursion depth exceeded
 
 不用深究上面盗梦空间这个程序的其它细节，不过，通过以上三个递归程序 —— 两个很扯淡的例子，一个正经例子 —— 你已经看到了递归函数的共同特征：
@@ -240,7 +241,7 @@ print(factorial(5))
 
 定义如此，但通常程序员们会严格地遵守一条原则：
 
-> 在函数内部绝对不调用全局变量。即便是必须改变全局变量，也只能通过函数的返回值在函数外改变全局变量。
+> ==在函数内部绝对不调用全局变量。即便是必须改变全局变量，也只能通过函数的返回值在函数外改变全局变量。==
 
 你也必须遵守同样的原则。而这个原则同样可以在日常的工作生活中 “调用”：
 

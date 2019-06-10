@@ -37,14 +37,14 @@ is_prime.__doc__
 ```
 
     Help on function is_prime in module __main__:
-
+    
     is_prime(n)
         Return a boolean value based upon
         whether the argument n is a prime number.
-
+    
         Return a boolean value based upon
         whether the argument n is a prime number.
-
+    
     '\n    Return a boolean value based upon\n    whether the argument n is a prime number.\n    '
 
 Docstring 可以是多行字符串，也可以是单行字符串：
@@ -69,15 +69,15 @@ is_prime.__doc__
 ```
 
     Help on function is_prime in module __main__:
-
+    
     is_prime(n)
         Return a boolean value based upon whether the argument n is a prime number.
-
+    
     Return a boolean value based upon whether the argument n is a prime number.
-
+    
     'Return a boolean value based upon whether the argument n is a prime number.'
 
-Docstring 如若存在，必须在函数定义的内部语句块的开头，也必须与其它语句一样保持相应的缩进（Indention）。Docstring 放在其它地方不起作用：
+==Docstring 如若存在，必须在函数定义的内部语句块的开头，也必须与其它语句一样保持相应的缩进（Indention）。Docstring 放在其它地方不起作用：==
 
 ```python
 def is_prime(n):
@@ -101,9 +101,9 @@ is_prime.__doc__
 ```
 
     Help on function is_prime in module __main__:
-
+    
     is_prime(n)
-
+    
     None
 
 ## 书写 Docstring 的规范
@@ -114,7 +114,7 @@ is_prime.__doc__
 
 简要总结一下 PEP 257 中必须掌握的规范：
 
-> 1. 无论是单行还是多行的 Docstring，一概使用三个双引号扩起；
+> 1. 无论是单行还是多行的 Docstring，一概使用==三个双引号扩起==；
 > 2. 在 Docstring 内部，文字开始之前，以及文字结束之后，都不要有空行；
 > 3. 多行 Docstring，第一行是概要，随后空一行，再写其它部分；
 > 4. 完善的 Docstring，应该概括清楚以下内容：参数、返回值、可能触发的错误类型、可能的副作用，以及函数的使用限制等等；
@@ -169,7 +169,7 @@ help(Vehicle)
 ```
 
     Help on class Vehicle in module __main__:
-
+    
     class Vehicle(builtins.object)
      |  Vehicle(arg, *args, **kwargs)
      |
