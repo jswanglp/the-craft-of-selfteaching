@@ -110,7 +110,7 @@ type(Counter)
     
     type
 
-这里的重点在于两个函数的存在，`__iter__(self)` 和 `__next__(self)`。
+==这里的重点在于两个函数的存在，`__iter__(self)` 和 `__next__(self)`。==
 
 ```python
 def __iter__(self):
@@ -175,13 +175,13 @@ for i in counter(101, 105):
 
 不过，是否简洁并不是问题，这次看起来用生成器更简单，无非是因为当前的例子更适合用生成器而已。在不同的情况下，用迭代器和用生成器各有各的优势。
 
-这里的关键在于 `yield` 这个语句。它和 `return` 最明显的不同在于，在它之后的语句依然会被执行 —— 而 `return` 之后的语句就被忽略了。
+==这里的关键在于 `yield` 这个语句。它和 `return` 最明显的不同在于，在它之后的语句依然会被执行 —— 而 `return` 之后的语句就被忽略了。==
 
 但正因为这个不同，在写生成器的时候，只能用 `yield`，而没办法使用 `return` —— 你现在可以回去把上面代码中的 `yield` 改成 `return` 看看，然后体会一下它们之间的不同。
 
 生成器函数被 `next()` 调用后，执行到 `yield` 生成一个值返回（然后继续执行 `next()` 外部剩余的语句）；下次再被 `next()` 调用的时候，从上次生成返回值的 `yield` 语句处继续执行…… 如果感觉费解，就多读几遍 —— 而后再想想若是生成器中有多个 `yield` 语句会是什么情况？
 
-还有一种东西，叫做生成器表达式。先看个例子：
+还有一种东西，叫做==生成器表达式==。先看个例子：
 
 ```python
 even = (e for e in range(10) if not e % 2)
@@ -234,7 +234,7 @@ for o in odd:
     7
     9
 
-**生成器表达式必须在括号内使用**（参见官方 [HOWTOS](https://docs.python.org/3/howto/functional.html#generator-expressions-and-list-comprehensions)），包括函数的参数括号，比如：
+==**生成器表达式必须在括号内使用**==（参见官方 [HOWTOS](https://docs.python.org/3/howto/functional.html#generator-expressions-and-list-comprehensions)），包括函数的参数括号，比如：
 
 ```python
 sum_of_even = sum(e for e in range(10) if not e % 2)
@@ -295,6 +295,23 @@ a_func()
     Hi, I'm a_func!
     Hi, I'm b_func!
 
+==换成 `yield`：==
+
+```python
+def a_func():
+    def b_func():
+       print("Hi, I'm b_func!")
+    print("Hi, I'm a_func!")
+    yield b_func()
+f = a_func()                   # <generator object a_func at 0x7f67791df4c0>
+next(f)
+```
+
+```
+Hi, I'm a_func!
+Hi, I'm b_func!
+```
+
 如果我们在 `return` 语句里只写函数名呢？好像这样：
 
 ```python
@@ -309,7 +326,7 @@ a_func()
     Hi, I'm a_func!
     <function __main__.a_func.<locals>.b_func()>
 
-这次返回的不是调用 `b_func()` 这个函数的执行结果，返回的是 `b_func` 这个*函数本身*。
+==这次返回的不是调用 `b_func()` 这个函数的执行结果，返回的是 `b_func` 这个*函数本身*。==
 
 ## 装饰器（Decorator）
 
@@ -321,7 +338,7 @@ a_func()
 
 于是，函数本身其实可以与其它的数据类型一样，作为其它函数的参数或者返回值。
 
-让我们分步走 —— 注意，在以下代码中，`a_decorator` 返回的一个函数的调用 `wrapper()` 而不是 `wrapper` 这个函数本身：
+让我们分步走 —— 注意，在以下代码中，`a_decorator` ==返回的一个函数的调用== `wrapper()` 而不是 `wrapper` 这个函数本身：
 
 ```python
 def a_decorator(func):
@@ -390,7 +407,7 @@ a_func()
 
 在我们定义 `a_func()` 的时候，在它之前，加上了一句 `@a_decorator`；这么做的结果是：
 
-> 每次 `a_func()` 在被调用的时候，因为它之前有一句 `@a_decorator`，所以它会先被当作参数传递到 `a_decorator(func)` 这个函数中…… 而后，真正的执行，是在 `a_decorator()` 里被完成的。
+> 每次 `a_func()` 在被调用的时候，因为它之前有一句 `@a_decorator`，==所以它会先被当作参数传递到 `a_decorator(func)` 这个函数中==…… 而后，真正的执行，是在 `a_decorator()` 里被完成的。
 
 —— 被 `@` 调用的函数，叫做 “装饰器”（Decorator），比如，以上代码中的 `a_decorator(func)`。
 
@@ -402,7 +419,7 @@ def a_func():
     ...
 ```
 
-等价于
+==等价于==
 
 ```python
 def a_func():
@@ -410,7 +427,7 @@ def a_func():
 a_func = a_decorator(a_func)
 ```
 
-就是用 `a_decorator` 的调用结果替换掉原来的函数。`a_decorator` 返回值是什么，以后调用 `a_func` 时就是在调用这个返回值，而 `a_decorator` 本身此时已经执行完毕了。
+==就是用 `a_decorator` 的调用结果替换掉原来的函数。`a_decorator` 返回值是什么，以后调用 `a_func` 时就是在调用这个返回值，而 `a_decorator` 本身此时已经执行完毕了。==
 
 ### 装饰器的用途
 
@@ -473,7 +490,7 @@ print(an_output())
 def an_output():
 ...
 ```
-装饰器的执行顺序是 “自下而上” —— 其实是 “由里到外” 更为准确。体会一下。
+==装饰器的执行顺序是 “自下而上” —— 其实是 “由里到外” 更为准确。==体会一下。
 
 ### 装饰带有参数的函数
 
@@ -493,7 +510,7 @@ def a_decorator(func):
     return wrapper
 ```
 
-在这里，`(*args, **kwargs)` 非常强大，它可以匹配所有函数传进来的所有参数…… 准确地讲，`*args` 接收并处理所有传递进来的位置参数，`**kwargs` 接收并处理所有传递进来的关键字参数。
+==在这里，`(*args, **kwargs)` 非常强大，它可以匹配所有函数传进来的所有参数…… 准确地讲，`*args` 接收并处理所有传递进来的位置参数，`**kwargs` 接收并处理所有传递进来的关键字参数。==
 
 假设我们有这么个函数：
 
@@ -545,3 +562,4 @@ Oreilly.com 上有篇文章，《5 reasons you need to learn to write Python dec
 > As I've traveled far and wide, training hundreds of working software engineers to use Python more effectively, teams have consistently reported writing decorators to be one of the most valuable and important tools they've learned in my advanced Python programming workshops.
 
 为什么有那么多人就是学不会呢？—— 只不过是因为在此之前，遇到 `*args` `**kwargs` 的时候，“一个星号、两个星号、直接晕倒”…… 而后并未再多挣扎一下。
+
